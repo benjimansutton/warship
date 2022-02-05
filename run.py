@@ -1,17 +1,3 @@
-#Opening page for game
-def game_intro():
-    """
-    Function to introduce the player to the game,
-    the story opens in 5 lines
-    """
-
-#Menu for the Player to select their path
-def menu():
-    """
-    Function to recieve the Player path,
-    to start the game, learn more about the story,
-    or quit the game
-    """
 
 #Quit the game function to allow the Player to leave
 def quit_game():
@@ -20,6 +6,7 @@ def quit_game():
     at multiple points including the menu and during
     game play
     """
+    print("quit game activated")
 
 #Play game function to start into the questions
 def play_game():
@@ -27,6 +14,63 @@ def play_game():
     Function for game play to start and push the player
     towards the first question
     """
+    print("play game activated")
+
+#Play game function to start into the questions
+def read_game_story():
+    """
+    Function for game play to start and push the player
+    towards the first question
+    """
+    print("read game activated")
+
+#Opening page for game
+def game_intro():
+    """
+    Function to introduce the player to the game,
+    the story opens in 5 lines
+    """
+    print("Welcome to Warship, the game where your choices can change your life.\n")
+    print("Warship is designed for you to move through the different paths\n")
+    menu()
+
+    #Menu for the Player to select their path
+def menu():
+    """
+    Function to recieve the Player path,
+    to start the game, learn more about the story,
+    or quit the game
+    """
+    print("Please select from one of the options below\n")
+
+    #Variable for the Opening Menu
+    menu_answer = input("Would you like to:\n A: Start the Game?\n B: Read the backstory to Warship?\n C: Quit the game?\n (A, B or C): ").lower().strip()
+
+    if menu_answer == "a":
+        play_game()
+
+    elif menu_answer == "b":
+        read_game_story()
+
+    elif menu_answer == "c":
+        quit_game()
+
+    else:
+        print("Invalid Choice")
+        game_intro()
+
+
+game_intro()
+
+
+
+
+
+
+
+    
+
+
 
 #Question one story opener function
 def opener_question():
