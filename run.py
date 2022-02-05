@@ -5,7 +5,21 @@ def inside_the_ship():
     Function to have you move into the ship and carry on the 
     exploration
     """
-    print("Inside the ship activated")
+    print("Your eyes start to adjust to the dark inside the ship.\n Just then you hear a metal on metal baniging noise.\n")
+    
+    question_six = input("What do you do?:\n a: Follow the sound to find the source?\nb: Go back through the hatch and onto\nthe upperdeck?\n").lower().strip()
+
+    if question_six == "a":
+        print("You have selected - Option a - Follow the sound to find the source?\n")
+        follow_the_sound()
+    elif question_six == "b":
+        print("You have selected - Option b - Go back through the hatch and onto the upperdeck?")
+        walking_the_upperdeck()
+    else:
+        print("invalid option, try again")
+        inside_the_ship()
+
+
 
 #Question number seven
 def walking_the_upperdeck():
@@ -13,7 +27,19 @@ def walking_the_upperdeck():
     Function to have the Player walk around the upperdeck
     and find a potentional way into the ship
     """
-    print("walking the upper deck activated")
+    print("Whilst walking around the upper deck.\nYou see a ghost like figure.\n")
+    
+    question_seven = input("What do you do?:\n a: Chase the figure to see what its doing?\nb: Get off the ship in quicktime and\ngo home?\n").lower().strip()
+
+    if question_seven == "a":
+        print("You have selected - Option a - Chase the figure to see what its doing?\n")
+        chase_the_figure()
+    elif question_seven == "b":
+        print("You have selected - Option b - Get off the ship in quicktime and go home?")
+        end_two()
+    else:
+        print("invalid option, try again")
+        walking_the_upperdeck()
 
 #Question number eight
 def follow_the_sound():
@@ -21,7 +47,19 @@ def follow_the_sound():
     Function to have the player follow the sound you can hear
     inside the ship
     """
-    print("follow the sound activated")
+    print("Whilst walking down the ships flats,\nthe banging starts to get louder,\nyou start to shake as it gets louder and louder.\n")
+    
+    question_eight = input("What do you do?:\n a: Open the door to see the source of the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
+
+    if question_eight == "a":
+        print("You have selected - Option a - Open the door to see the source of the sound?\n")
+        door_open()
+    elif question_eight == "b":
+        print("You have selected - Option b - Leave the ship as quick as you can?")
+        leave_in_a_hurry()
+    else:
+        print("invalid option, try again")
+        follow_the_sound()
 
 #Question number nine
 def chase_the_figure():
