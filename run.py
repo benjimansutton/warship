@@ -36,5 +36,33 @@ def opener_question():
     """
 
 
+#To get aboard the ship function question two
+def aboard_the_ship():
+    """
+    Function for question two to show the path to,
+    aboard the ship
+    """
+
+
+#Question number three function
+def see_a_figure():
+    """
+    Function for question three to see a figure on the
+    ship
+    """
+
+#Question number four
+def friends_arrive():
+    """
+    Function to have your friends arrive to carry on the 
+    explouration of the ship
+    """
+
+#Question number five
+def coastguard():
+    """
+    Function to have the coastguard assist in seeing the ship,
+    to report it and also to find if your allowed to board the ship
+    """
 
 
