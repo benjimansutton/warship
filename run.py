@@ -1,4 +1,6 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-print("hello world")
+#Opening page for game
+def game_intro():
+    """
+    Function to introduce the player to the game,
+    the story opens in 5 lines"""
+
