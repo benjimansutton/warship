@@ -100,4 +100,45 @@ def leave_in_a_hurry():
     this would then have the game end
     """
 
+#Question nunber eleven
+def door_open():
+    """
+    Function for the Player to open the door inside the 
+    ship to find the sound
+    """
+
+#Function to end the game at the first point
+def end_one():
+    """
+    Function for the Player to end the game
+    at the first point in the game
+    """
+
+#Function to end the game at the first point
+def end_two():
+    """
+    Function for the Player to end the game
+    at the second point in the game
+    """
+
+#Function to end the game at the first point
+def end_three():
+    """
+    Function for the Player to end the game
+    at the third point in the game
+    """
+
+#Function to end the game at the first point
+def end_four():
+    """
+    Function for the Player to end the game
+    at the fourth point in the game
+    """
+
+#Function to end the game at the first point
+def final_end():
+    """
+    Function for the Player to end the game
+    at the final point in the game
+    """
 
