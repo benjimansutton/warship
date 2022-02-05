@@ -150,7 +150,18 @@ def friends_arrive():
     Function to have your friends arrive to carry on the 
     explouration of the ship
     """
-    print("friends arrive activated")
+    print("Your friends are by your side,\nthis gives you a boost of confidence.\nBrian suggests climbing aboard the Ship.\n")
+    question_four = input("What do you do?:\n a: Follow Brian aboard the ship?\nb: Tell them you want to go home?\n").lower().strip()
+
+    if question_four == "a":
+        print("You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
+        aboard_the_ship()
+    elif question_four == "b":
+        print("You have selected - Option b - Take your boat futher away from the Warship?")
+        end_one()
+    else:
+        print("invalid option, try again")
+        friends_arrive()
 
 #Question number five
 def coastguard():
@@ -158,7 +169,18 @@ def coastguard():
     Function to have the coastguard assist in seeing the ship,
     to report it and also to find if your allowed to board the ship
     """
-    print("coastguard activated")
+    print("The Cpastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
+    question_five = input("What do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
+
+    if question_five == "a":
+        print("You have selected - Option a - Walk the upperdeck with them?\n")
+        walking_the_upperdeck()
+    elif question_five == "b":
+        print("You have selected - Option b - Take your boat futher away from the Warship?")
+        end_one()
+    else:
+        print("invalid option, try again")
+        coastguard()
 
 
 #Quit the game function to allow the Player to leave
