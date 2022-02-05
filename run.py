@@ -1,15 +1,16 @@
+options = ("invalid option, try again", "You have selected - ", "Option a ", "Option b ", "Option c ")
 
 #Question number ten
 def leave_in_a_hurry():
     """
-    Function to have the Player leave quickly scared 
+    Function to have the Player leave quickly scared
     this would then have the game end
     """
     print("Your out of the ship, so scared with whats just happened.\n")
-    question_ten = input("What do you do?:\n a: Catch your breath and get up the courage to follow the sound again?\nb: Leave the ship and go home?\n").lower().strip()
+    question_ten = input("What do you do?:\n a: Catch your breath and get up the\ncourage to follow the sound again?\nb: Leave the ship and go home?\n").lower().strip()
 
     if question_ten == "a":
-        print("You have selected - Option a - Catch your breath and get up the courage to follow the sound again?\n")
+        print((options[1, 2]))
         follow_the_sound()
     elif question_ten == "b":
         print("You have selected - Option b - Leave the ship and go home?")
@@ -18,7 +19,7 @@ def leave_in_a_hurry():
         print("invalid option, try again")
         leave_in_a_hurry()    
 
-#Question nunber eleven
+#Question number eleven
 def door_open():
     """
     Function for the Player to open the door inside the 
@@ -42,7 +43,7 @@ def inside_the_ship():
     Function to have you move into the ship and carry on the 
     exploration
     """
-    print("Your eyes start to adjust to the dark inside the ship.\n Just then you hear a metal on metal baniging noise.\n")
+    print("Your eyes start to adjust to the dark inside the ship.\n Just then you hear a metal on metal banging noise.\n")
     
     question_six = input("What do you do?:\n a: Follow the sound to find the source?\nb: Go back through the hatch and onto\nthe upperdeck?\n").lower().strip()
 
@@ -62,7 +63,7 @@ def inside_the_ship():
 def walking_the_upperdeck():
     """
     Function to have the Player walk around the upperdeck
-    and find a potentional way into the ship
+    and find a potential way into the ship
     """
     print("Whilst walking around the upper deck.\nYou see a ghost like figure.\n")
     
@@ -128,7 +129,7 @@ def opener_question():
 
     print("You spot an abandoned Warship in the sea by your house,\nyou decide to venture towards the ship.\nYou spot there is no Captain or Crew aboard the ship.\n")
     print("You get in your rowing boat and head towards the Warship.\nYou see a ladder hanging over the side of the ship,\nswaying in the wind.")
-    question_one = input("What do you do?:\n a: Climb aboard the ship alone?\nb: Report the ship to the coast guard?\nc: Call your friends to go abouard with you?\n").lower().strip()
+    question_one = input("What do you do?:\n a: Climb aboard the ship alone?\nb: Report the ship to the coast guard?\nc: Call your friends to go aboard with you?\n").lower().strip()
 
     if question_one == "a":
         print("You have selected - Option a - Climb aboard the ship alone?\n")
@@ -137,7 +138,7 @@ def opener_question():
         print("You have selected - Option b - Report the ship to the coast guard?")
         see_a_figure()
     elif question_one == "c":
-        print("You have selected - Option c - Call your friends to go abouard with you?")
+        print("You have selected - Option c - Call your friends to go aboard with you?")
         friends_arrive()
 
 #To get aboard the ship function question two
@@ -166,7 +167,7 @@ def see_a_figure():
     Function for question three to see a figure on the
     ship, this enables you to go back to getting aboard the ship.
     """
-    print("Whilst your driftin around this huge,\nWarship waiting for the Coastguard.\nYou see a figure aboard the Ship.\n")
+    print("Whilst your drifting around this huge,\nWarship waiting for the Coastguard.\nYou see a figure aboard the Ship.\n")
     question_three = input("What do you do?:\n a: Climb aboard the ship to make sure they are okay?\nb: Take your boat futher away from the Warship?\n").lower().strip()
 
     if question_three == "a":
@@ -206,7 +207,7 @@ def coastguard():
     Function to have the coastguard assist in seeing the ship,
     to report it and also to find if your allowed to board the ship
     """
-    print("The Cpastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
+    print("The Coastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
     question_five = input("What do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_five == "a":
@@ -254,7 +255,7 @@ def read_game_story():
     print("Warship is a text based game that brings you to the shore line by your house,\nwhen you arrive at the waters edge, you see a World War II Warship.")
     print("This ship looks as though it is abandoned, and it sends shivers down your spine.\nYou decide to go towards the vessel to see if its real or your imagination.")
     print("When you get to the ship, thr story takes you down various paths and as the story\nunfolds you become, more intrested in what the ship has to offer.")
-    print(menu(input("What would you like to do next?")))
+    menu()
 
 
 #Opening page for game
@@ -272,7 +273,7 @@ def game_intro():
     #Menu for the Player to select their path
 def menu():
     """
-    Function to recieve the Player path,
+    Function to receive the Player path,
     to start the game, learn more about the story,
     or quit the game
     """
