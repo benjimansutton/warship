@@ -22,8 +22,10 @@ def read_game_story():
     Function for game play to start and push the player
     towards the first question
     """
-    print("read game activated")
-
+    print("Warship is a text based game that brings you to the shore line by your house,\nwhen you arrive at the waters edge, you see a World War II Warship.")
+    print("This ship looks as though it is abandoned, and it sends shivers down your spine.\nYou decide to go towards the vessel to see if its real or your imagination.")
+    print("When you get to the ship, thr story takes you down various paths and as the story unfolds you become,\nmore intrested in what the ship has to offer.")
+    print(input("What would you like to do next?"))
 #Opening page for game
 def game_intro():
     """
@@ -56,7 +58,7 @@ def menu():
         quit_game()
 
     else:
-        print("Invalid Choice")
+        print("Invalid Entry, please select the correct input using a, b or c")
         game_intro()
 
 
