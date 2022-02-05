@@ -67,7 +67,19 @@ def chase_the_figure():
     Function to have the play chase the figure you have just seen
     maybe it was a figment of your imagination
     """
-    print("chase the figure activated")
+    print("You run after the figure through a door,\ndown some stairs.\nAs you reach the halls of the ship you hear a loud,\nbanging noise, metal on metal banging.\n")
+    
+    question_nine = input("What do you do?:\n a: Follow the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
+
+    if question_nine == "a":
+        print("You have selected - Option a - Follow the sound?\n")
+        follow_the_sound()
+    elif question_nine == "b":
+        print("You have selected - Option b - Leave the ship as quick as you can?")
+        leave_in_a_hurry()
+    else:
+        print("invalid option, try again")
+        chase_the_figure()
 
 #Question one story opener function
 def opener_question():
@@ -103,7 +115,7 @@ def aboard_the_ship():
     if question_two == "a":
         print("You have selected - Option a - Go inside the ship through the hatch?\n")
         inside_the_ship()
-    elif question_one == "b":
+    elif question_two == "b":
         print("You have selected - Option b - Close the hatch and carry on walking?")
         walking_the_upperdeck()
     else:
@@ -115,9 +127,22 @@ def aboard_the_ship():
 def see_a_figure():
     """
     Function for question three to see a figure on the
-    ship
+    ship, this enables you to go back to getting aboard the ship.
     """
-    print("see a figure activated")
+    print("Whilst your driftin around this huge,\nWarship waiting for the Coastguard.\nYou see a figure aboard the Ship.\n")
+    question_three = input("What do you do?:\n a: Climb aboard the ship to make sure they are okay?\nb: Take your boat futher away from the Warship?\n").lower().strip()
+
+    if question_three == "a":
+        print("You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
+        aboard_the_ship()
+    elif question_three == "b":
+        print("You have selected - Option b - Take your boat futher away from the Warship?")
+        coastguard()
+    else:
+        print("invalid option, try again")
+        see_a_figure()
+
+
 
 #Question number four
 def friends_arrive():
@@ -213,46 +238,6 @@ def menu():
 
 
 game_intro()
-
-
-
-
-
-
-
-
-    
-
-
-
-
-#Question number six
-def inside_the_ship():
-    """
-    Function to have you move into the ship and carry on the 
-    exploration
-    """
-
-#Question number seven
-def walking_the_upperdeck():
-    """
-    Function to have the Player walk around the upperdeck
-    and find a potentional way into the ship
-    """
-
-#Question number eight
-def follow_the_sound():
-    """
-    Function to have the player follow the sound you can hear
-    inside the ship
-    """
-
-#Question number nine
-def chase_the_figure():
-    """
-    Function to have the play chase the figure you have just seen
-    maybe it was a figment of your imagination
-    """
 
 #Question number ten
 def leave_in_a_hurry():
