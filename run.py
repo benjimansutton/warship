@@ -21,3 +21,12 @@ def quit_game():
     game play
     """
 
+#Play game function to start into the questions
+def play_game():
+    """
+    Function for game play to start and push the player
+    towards the first question
+    """
+
+
+
