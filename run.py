@@ -28,5 +28,13 @@ def play_game():
     towards the first question
     """
 
+#Question one story opener function
+def opener_question():
+    """
+    Function for question one to allow the user to,
+    select their first path
+    """
+
+
 
 
