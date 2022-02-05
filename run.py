@@ -30,7 +30,7 @@ def door_open():
 
     while final_end == "sound":
         print("With a scream, you are startled awake.\nYou slowly start to realise that you where asleep the whole time.\n The dream felt so real.\n")
-        break
+        final_end()
     else:
         print("Wrong word, type sound.\n")
         final_end
