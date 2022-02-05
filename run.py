@@ -1,9 +1,42 @@
 
+#Question number six
+def inside_the_ship():
+    """
+    Function to have you move into the ship and carry on the 
+    exploration
+    """
+    print("Inside the ship activated")
+
+#Question number seven
+def walking_the_upperdeck():
+    """
+    Function to have the Player walk around the upperdeck
+    and find a potentional way into the ship
+    """
+    print("walking the upper deck activated")
+
+#Question number eight
+def follow_the_sound():
+    """
+    Function to have the player follow the sound you can hear
+    inside the ship
+    """
+    print("follow the sound activated")
+
+#Question number nine
+def chase_the_figure():
+    """
+    Function to have the play chase the figure you have just seen
+    maybe it was a figment of your imagination
+    """
+    print("chase the figure activated")
+
 #Question one story opener function
 def opener_question():
     """
     Function for question one to allow the user to,
-    select their first path
+    select their first path using an if/elif loop to tell the 
+    player what they have selected and get them to the next function
     """
 
     print("You spot an abandoned Warship in the sea by your house,\nyou decide to venture towards the ship.\nYou spot there is no Captain or Crew aboard the ship.\n")
@@ -26,7 +59,18 @@ def aboard_the_ship():
     Function for question two to show the path to,
     aboard the ship
     """
-    print("go aboard the ship")
+    print("Now you have climbed up the ladder, onto the Warship.\nYou start to walk around and see an open hatch.\n")
+    question_two = input("What do you do?:\n a: Go inside the ship through the hatch?\nb: Close the hatch and carry on walking?\n").lower().strip()
+
+    if question_two == "a":
+        print("You have selected - Option a - Go inside the ship through the hatch?\n")
+        inside_the_ship()
+    elif question_one == "b":
+        print("You have selected - Option b - Close the hatch and carry on walking?")
+        walking_the_upperdeck()
+    else:
+        print("invalid option, try again")
+        aboard_the_ship()
 
 
 #Question number three function
@@ -64,6 +108,7 @@ def quit_game():
     i = "You have decided to Quit the game, Thanks for playing.\n"
     while True:
         print(i)
+        game_intro()
     
     print("quit game activated")
 
