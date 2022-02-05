@@ -65,4 +65,39 @@ def coastguard():
     to report it and also to find if your allowed to board the ship
     """
 
+#Question number six
+def inside_the_ship():
+    """
+    Function to have you move into the ship and carry on the 
+    exploration
+    """
+
+#Question number seven
+def walking_the_upperdeck():
+    """
+    Function to have the Player walk around the upperdeck
+    and find a potentional way into the ship
+    """
+
+#Question number eight
+def follow_the_sound():
+    """
+    Function to have the player follow the sound you can hear
+    inside the ship
+    """
+
+#Question number nine
+def chase_the_figure():
+    """
+    Function to have the play chase the figure you have just seen
+    maybe it was a figment of your imagination
+    """
+
+#Question number ten
+def leave_in_a_hurry():
+    """
+    Function to have the Player leave quickly scared 
+    this would then have the game end
+    """
+
 
