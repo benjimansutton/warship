@@ -1,4 +1,41 @@
 
+#Question number ten
+def leave_in_a_hurry():
+    """
+    Function to have the Player leave quickly scared 
+    this would then have the game end
+    """
+    print("Your out of the ship, so scared with whats just happened.\n")
+    question_ten = input("What do you do?:\n a: Catch your breath and get up the courage to follow the sound again?\nb: Leave the ship and go home?\n").lower().strip()
+
+    if question_ten == "a":
+        print("You have selected - Option a - Catch your breath and get up the courage to follow the sound again?\n")
+        follow_the_sound()
+    elif question_ten == "b":
+        print("You have selected - Option b - Leave the ship and go home?")
+        end_three()
+    else:
+        print("invalid option, try again")
+        leave_in_a_hurry()    
+
+#Question nunber eleven
+def door_open():
+    """
+    Function for the Player to open the door inside the 
+    ship to find the sound
+    """
+    print("You slowly open the door, trying hard to not see what is there.\nThen the final part of door opens fast.\nYou see a figure...\n")
+    
+    final_end = input("Type in sound, to see what happens next?").lower().strip()
+
+    while final_end == "sound":
+        print("With a scream, you are startled awake.\nYou slowly start to realise that you where asleep the whole time.\n The dream felt so real.\n")
+        break
+    else:
+        print("Wrong word, type sound.\n")
+        final_end
+
+
 #Question number six
 def inside_the_ship():
     """
@@ -261,19 +298,6 @@ def menu():
 
 game_intro()
 
-#Question number ten
-def leave_in_a_hurry():
-    """
-    Function to have the Player leave quickly scared 
-    this would then have the game end
-    """
-
-#Question nunber eleven
-def door_open():
-    """
-    Function for the Player to open the door inside the 
-    ship to find the sound
-    """
 
 #Function to end the game at the first point
 def end_one():
