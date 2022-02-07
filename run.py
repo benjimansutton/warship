@@ -1,3 +1,4 @@
+from colorama import init
 from colorama import Fore, Back, Style
 
 #Function to ask the player if they want to play again
