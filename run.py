@@ -187,7 +187,7 @@ def chase_the_figure():
     """
     print(Fore.BLUE + "You run after the figure through a door,\ndown some stairs.\nAs you reach the halls of the ship you hear a loud,\nbanging noise, metal on metal banging.\n")
     
-    question_nine = input(Fore.MAGENTA + "What do you do?:\n a: Follow the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
+    question_nine = input(Fore.MAGENTA + "What do you do?:\na: Follow the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
 
     if question_nine == "a":
         print(Fore.YELLOW + "You have selected - Option a - Follow the sound?\n")
@@ -209,7 +209,7 @@ def opener_question():
 
     print(Fore.BLUE + "You spot an abandoned Warship in the sea by your house,\nyou decide to venture towards the ship.\nYou spot there is no Captain or Crew aboard the ship.\n")
     print(Fore.BLUE + "You get in your rowing boat and head towards the Warship.\nYou see a ladder hanging over the side of the ship,\nswaying in the wind.")
-    question_one = input(Fore.MAGENTA + "What do you do?:\n a: Climb aboard the ship alone?\nb: Report the ship to the coast guard?\nc: Call your friends to go aboard with you?\n").lower().strip()
+    question_one = input(Fore.MAGENTA + "What do you do?:\na: Climb aboard the ship alone?\nb: Report the ship to the coast guard?\nc: Call your friends to go aboard with you?\n").lower().strip()
 
     if question_one == "a":
         print(Fore.YELLOW + "You have selected - Option a - Climb aboard the ship alone?\n")
@@ -220,6 +220,9 @@ def opener_question():
     elif question_one == "c":
         print(Fore.YELLOW + "You have selected - Option c - Call your friends to go aboard with you?")
         friends_arrive()
+    else:
+        print(Fore.RED + "invalid option, try again")
+        opener_question()
 
 #To get aboard the ship function question two
 def aboard_the_ship():
@@ -270,7 +273,7 @@ def friends_arrive():
     explouration of the ship
     """
     print(Fore.BLUE + "Your friends are by your side,\nthis gives you a boost of confidence.\nBrian suggests climbing aboard the Ship.\n")
-    question_four = input(Fore.MAGENTA + "What do you do?:\n a: Follow Brian aboard the ship?\nb: Tell them you want to go home?\n").lower().strip()
+    question_four = input(Fore.MAGENTA + "What do you do?:\na: Follow Brian aboard the ship?\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_four == "a":
         print(Fore.YELLOW + "You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
@@ -289,7 +292,7 @@ def coastguard():
     to report it and also to find if your allowed to board the ship
     """
     print(Fore.BLUE + "The Coastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
-    question_five = input(Fore.MAGENTA + "\nWhat do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
+    question_five = input(Fore.MAGENTA + "\nWhat do you do?:\na: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_five == "a":
         print(Fore.YELLOW + "You have selected - Option a - Walk the upperdeck with them?\n")
