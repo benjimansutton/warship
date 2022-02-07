@@ -1,4 +1,4 @@
-from colorama import Fore, Back
+from colorama import Fore, Back, Style
 
 #Function to ask the player if they want to play again
 def replay_game():
