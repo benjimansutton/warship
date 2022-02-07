@@ -235,8 +235,6 @@ def opener_question():
     select their first path using an if/elif loop to tell the
     player what they have selected and get them to the next function
     """
-    
-
     print(
         Fore.BLUE + "You spot an abandoned Warship in the sea by your house,"
         "\nyou decide to venture towards the ship."
@@ -479,4 +477,3 @@ def menu():
 
 
 game_intro()
-
