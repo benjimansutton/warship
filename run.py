@@ -1,4 +1,3 @@
-from colorama import init
 from colorama import Fore, Back, Style
 
 #Function to ask the player if they want to play again
@@ -360,7 +359,7 @@ def menu():
     print(Fore.BLUE + "Please select from one of the options below\n")
 
     #Variable for the Opening Menu
-    menu_answer = input(Fore.MAGENTA + "Would you like to:\n A: Start the Game?\n B: Read the backstory to Warship?\n C: Quit the game?\n (A, B or C): ").lower().strip()
+    menu_answer = input(Fore.MAGENTA + "\nWould you like to:\n b: Start the Game?\n b: Read the backstory to Warship?\n c: Quit the game?\n(a, b or c): ").lower().strip()
 
     if menu_answer == "a":
         play_game()
