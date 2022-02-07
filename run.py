@@ -1,8 +1,4 @@
-from colorama import Fore, Back, Style
-print(Fore.RED + 'some red text')
-print(Fore.MAGENTA + 'some red text')
-print(Fore.YELLOW + 'some red text')
-print(Fore.BLUE + 'some red text')
+from colorama import Fore
 
 #Function to ask the player if they want to play again
 def replay_game():
@@ -17,8 +13,21 @@ def replay_game():
         game_intro()
     elif replay_game_answer == "no":
         print(Fore.YELLOW + "Thank You for playing the game, have a lovely day....")
-    else replay_game_answer():
+    else:
         print(Fore.RED + "invalid option, try again")
+        replay_game()
+
+
+#Function to end the game at the first point
+def final_end():
+    """
+    Function for the Player to end the game
+    at the final point in the game
+    """
+    print("Final End activated")
+
+    print(Fore.RED + "YOUR LYING IN BED, SWEATING.\nTHE DREAM FELT SO REAL")
+    replay_game()
 
 
 #Function to end the game at the first point
@@ -67,16 +76,6 @@ def end_four():
 
 
 
-#Function to end the game at the first point
-def final_end():
-    """
-    Function for the Player to end the game
-    at the final point in the game
-    """
-    print("Final End activated")
-
-    print(Fore.RED + "YOUR LYING IN BED, SWEATING. THE DREAM FELT SO REAL")
-    replay_game()
 
 
 options = ("invalid option, try again", "You have selected - ", "Option a ", "Option b ", "Option c ")
@@ -108,14 +107,14 @@ def door_open():
     """
     print(Fore.BLUE + "You slowly open the door, trying hard to not see what is there.\nThen the final part of door opens fast.\nYou see a figure...\n")
     
-    final_end = input(Fore.MAGENTA + "Type in sound, to see what happens next?").lower().strip()
+    final_end_answer = input(Fore.MAGENTA + "Type in sound, to see what happens next?").lower().strip()
 
-    while final_end == "sound":
+    while final_end_answer == "sound":
         print(Fore.BLUE + "With a scream, you are startled awake.\nYou slowly start to realise that you where asleep the whole time.\n The dream felt so real.\n")
         final_end()
     else:
         print(Fore.RED + "Wrong word, type sound.\n")
-        final_end
+        final_end()
 
 
 #Question number six
@@ -242,6 +241,7 @@ def aboard_the_ship():
         aboard_the_ship()
 
 
+
 #Question number three function
 def see_a_figure():
     """
@@ -289,7 +289,7 @@ def coastguard():
     to report it and also to find if your allowed to board the ship
     """
     print(Fore.BLUE + "The Coastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
-    question_five = input(Fore.MAGENTA + "What do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
+    question_five = input(Fore.MAGENTA + "\nWhat do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_five == "a":
         print(Fore.YELLOW + "You have selected - Option a - Walk the upperdeck with them?\n")
@@ -313,8 +313,6 @@ def quit_game():
     while True:
         print(i)
         game_intro()
-    
-    print("quit game activated")
 
 
 
@@ -324,7 +322,7 @@ def play_game():
     Function for game play to start and push the player
     towards the first question
     """
-    print("You have selected Play the Game.\n")
+    print(Fore.YELLOW + "You have selected Play the Game.\n")
     opener_question()
 
 #Read game function to explain to the Player the backstory of the game
@@ -351,7 +349,7 @@ def game_intro():
 
 
 
-    #Menu for the Player to select their path
+#Menu for the Player to select their path
 def menu():
     """
     Function to receive the Player path,
@@ -371,7 +369,6 @@ def menu():
 
     elif menu_answer == "c":
         quit_game()
-
     else:
         print(Fore.RED + "Invalid Entry, please select the correct input using a, b or c")
         game_intro()
