@@ -29,6 +29,9 @@ def end_one():
     """
     print("End one activated")
 
+    print(Fore.RED + "You have decided to go home....")
+    replay_game()
+
 
 #Function to end the game at the first point
 def end_two():
@@ -37,6 +40,8 @@ def end_two():
     at the second point in the game
     """
     print("End two activated")
+    print(Fore.RED + "You have decided to go home....")
+    replay_game()
 
 #Function to end the game at the first point
 def end_three():
@@ -45,6 +50,9 @@ def end_three():
     at the third point in the game
     """
     print("End three activated")
+    print(Fore.RED + "You have decided to go home....")
+    replay_game()
+
 
 
 #Function to end the game at the first point
@@ -54,6 +62,9 @@ def end_four():
     at the fourth point in the game
     """
     print("End four activated")
+    print(Fore.RED + "You have decided to go home....")
+    replay_game()
+
 
 
 #Function to end the game at the first point
@@ -63,6 +74,10 @@ def final_end():
     at the final point in the game
     """
     print("Final End activated")
+
+    print(Fore.RED + "YOUR LYING IN BED, SWEATING. THE DREAM FELT SO REAL")
+    replay_game()
+
 
 options = ("invalid option, try again", "You have selected - ", "Option a ", "Option b ", "Option c ")
 
