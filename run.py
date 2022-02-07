@@ -4,6 +4,23 @@ print(Fore.MAGENTA + 'some red text')
 print(Fore.YELLOW + 'some red text')
 print(Fore.BLUE + 'some red text')
 
+#Function to ask the player if they want to play again
+def replay_game():
+    """
+    Function to get the player back into the game
+    if they want to play again, and if not take them
+    back to the begining
+    """
+
+    replay_game_answer = input(Fore.BLUE + "Would you like to play the game again? (yes/no): ").lower().strip()
+    if replay_game_answer == "yes":
+        game_intro()
+    elif replay_game_answer == "no":
+        print(Fore.YELLOW + "Thank You for playing the game, have a lovely day....")
+    else replay_game_answer():
+        print(Fore.RED + "invalid option, try again")
+
+
 #Function to end the game at the first point
 def end_one():
     """
