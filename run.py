@@ -1,3 +1,52 @@
+from colorama import Fore, Back, Style
+print(Fore.RED + 'some red text')
+print(Fore.MAGENTA + 'some red text')
+print(Fore.YELLOW + 'some red text')
+print(Fore.BLUE + 'some red text')
+
+#Function to end the game at the first point
+def end_one():
+    """
+    Function for the Player to end the game
+    at the first point in the game
+    """
+    print("End one activated")
+
+
+#Function to end the game at the first point
+def end_two():
+    """
+    Function for the Player to end the game
+    at the second point in the game
+    """
+    print("End two activated")
+
+#Function to end the game at the first point
+def end_three():
+    """
+    Function for the Player to end the game
+    at the third point in the game
+    """
+    print("End three activated")
+
+
+#Function to end the game at the first point
+def end_four():
+    """
+    Function for the Player to end the game
+    at the fourth point in the game
+    """
+    print("End four activated")
+
+
+#Function to end the game at the first point
+def final_end():
+    """
+    Function for the Player to end the game
+    at the final point in the game
+    """
+    print("Final End activated")
+
 options = ("invalid option, try again", "You have selected - ", "Option a ", "Option b ", "Option c ")
 
 #Question number ten
@@ -6,17 +55,17 @@ def leave_in_a_hurry():
     Function to have the Player leave quickly scared
     this would then have the game end
     """
-    print("Your out of the ship, so scared with whats just happened.\n")
-    question_ten = input("What do you do?:\n a: Catch your breath and get up the\ncourage to follow the sound again?\nb: Leave the ship and go home?\n").lower().strip()
+    print(Fore.BLUE + "Your out of the ship, so scared with whats just happened.\n")
+    question_ten = input(Fore.MAGENTA + "What do you do?:\n a: Catch your breath and get up the\ncourage to follow the sound again?\nb: Leave the ship and go home?\n").lower().strip()
 
     if question_ten == "a":
         print((options[1, 2]))
         follow_the_sound()
     elif question_ten == "b":
-        print("You have selected - Option b - Leave the ship and go home?")
+        print(Fore.YELLOW + "You have selected - Option b - Leave the ship and go home?")
         end_three()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         leave_in_a_hurry()    
 
 #Question number eleven
@@ -25,15 +74,15 @@ def door_open():
     Function for the Player to open the door inside the 
     ship to find the sound
     """
-    print("You slowly open the door, trying hard to not see what is there.\nThen the final part of door opens fast.\nYou see a figure...\n")
+    print(Fore.BLUE + "You slowly open the door, trying hard to not see what is there.\nThen the final part of door opens fast.\nYou see a figure...\n")
     
-    final_end = input("Type in sound, to see what happens next?").lower().strip()
+    final_end = input(Fore.MAGENTA + "Type in sound, to see what happens next?").lower().strip()
 
     while final_end == "sound":
-        print("With a scream, you are startled awake.\nYou slowly start to realise that you where asleep the whole time.\n The dream felt so real.\n")
+        print(Fore.BLUE + "With a scream, you are startled awake.\nYou slowly start to realise that you where asleep the whole time.\n The dream felt so real.\n")
         final_end()
     else:
-        print("Wrong word, type sound.\n")
+        print(Fore.RED + "Wrong word, type sound.\n")
         final_end
 
 
@@ -43,18 +92,18 @@ def inside_the_ship():
     Function to have you move into the ship and carry on the 
     exploration
     """
-    print("Your eyes start to adjust to the dark inside the ship.\n Just then you hear a metal on metal banging noise.\n")
+    print(Fore.BLUE + "Your eyes start to adjust to the dark inside the ship.\n Just then you hear a metal on metal banging noise.\n")
     
-    question_six = input("What do you do?:\n a: Follow the sound to find the source?\nb: Go back through the hatch and onto\nthe upperdeck?\n").lower().strip()
+    question_six = input(Fore.MAGENTA + "What do you do?:\n a: Follow the sound to find the source?\nb: Go back through the hatch and onto\nthe upperdeck?\n").lower().strip()
 
     if question_six == "a":
-        print("You have selected - Option a - Follow the sound to find the source?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Follow the sound to find the source?\n")
         follow_the_sound()
     elif question_six == "b":
-        print("You have selected - Option b - Go back through the hatch and onto the upperdeck?")
+        print(Fore.YELLOW + "You have selected - Option b - Go back through the hatch and onto the upperdeck?")
         walking_the_upperdeck()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         inside_the_ship()
 
 
@@ -65,18 +114,18 @@ def walking_the_upperdeck():
     Function to have the Player walk around the upperdeck
     and find a potential way into the ship
     """
-    print("Whilst walking around the upper deck.\nYou see a ghost like figure.\n")
+    print(Fore.BLUE + "Whilst walking around the upper deck.\nYou see a ghost like figure.\n")
     
-    question_seven = input("What do you do?:\n a: Chase the figure to see what its doing?\nb: Get off the ship in quicktime and\ngo home?\n").lower().strip()
+    question_seven = input(Fore.MAGENTA + "What do you do?:\n a: Chase the figure to see what its doing?\nb: Get off the ship in quicktime and\ngo home?\n").lower().strip()
 
     if question_seven == "a":
-        print("You have selected - Option a - Chase the figure to see what its doing?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Chase the figure to see what its doing?\n")
         chase_the_figure()
     elif question_seven == "b":
-        print("You have selected - Option b - Get off the ship in quicktime and go home?")
+        print(Fore.YELLOW + "You have selected - Option b - Get off the ship in quicktime and go home?")
         end_two()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         walking_the_upperdeck()
 
 #Question number eight
@@ -85,18 +134,18 @@ def follow_the_sound():
     Function to have the player follow the sound you can hear
     inside the ship
     """
-    print("Whilst walking down the ships flats,\nthe banging starts to get louder,\nyou start to shake as it gets louder and louder.\n")
+    print(Fore.BLUE +"Whilst walking down the ships flats,\nthe banging starts to get louder,\nyou start to shake as it gets louder and louder.\n")
     
-    question_eight = input("What do you do?:\n a: Open the door to see the source of the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
+    question_eight = input(Fore.MAGENTA + "What do you do?:\n a: Open the door to see the source of the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
 
     if question_eight == "a":
-        print("You have selected - Option a - Open the door to see the source of the sound?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Open the door to see the source of the sound?\n")
         door_open()
     elif question_eight == "b":
-        print("You have selected - Option b - Leave the ship as quick as you can?")
+        print(Fore.YELLOW + "You have selected - Option b - Leave the ship as quick as you can?")
         leave_in_a_hurry()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         follow_the_sound()
 
 #Question number nine
@@ -105,18 +154,18 @@ def chase_the_figure():
     Function to have the play chase the figure you have just seen
     maybe it was a figment of your imagination
     """
-    print("You run after the figure through a door,\ndown some stairs.\nAs you reach the halls of the ship you hear a loud,\nbanging noise, metal on metal banging.\n")
+    print(Fore.BLUE + "You run after the figure through a door,\ndown some stairs.\nAs you reach the halls of the ship you hear a loud,\nbanging noise, metal on metal banging.\n")
     
-    question_nine = input("What do you do?:\n a: Follow the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
+    question_nine = input(Fore.MAGENTA + "What do you do?:\n a: Follow the sound?\nb: Leave the ship as quick as you can?\n").lower().strip()
 
     if question_nine == "a":
-        print("You have selected - Option a - Follow the sound?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Follow the sound?\n")
         follow_the_sound()
     elif question_nine == "b":
-        print("You have selected - Option b - Leave the ship as quick as you can?")
+        print(Fore.YELLOW + "You have selected - Option b - Leave the ship as quick as you can?")
         leave_in_a_hurry()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         chase_the_figure()
 
 #Question one story opener function
@@ -127,18 +176,18 @@ def opener_question():
     player what they have selected and get them to the next function
     """
 
-    print("You spot an abandoned Warship in the sea by your house,\nyou decide to venture towards the ship.\nYou spot there is no Captain or Crew aboard the ship.\n")
-    print("You get in your rowing boat and head towards the Warship.\nYou see a ladder hanging over the side of the ship,\nswaying in the wind.")
-    question_one = input("What do you do?:\n a: Climb aboard the ship alone?\nb: Report the ship to the coast guard?\nc: Call your friends to go aboard with you?\n").lower().strip()
+    print(Fore.BLUE + "You spot an abandoned Warship in the sea by your house,\nyou decide to venture towards the ship.\nYou spot there is no Captain or Crew aboard the ship.\n")
+    print(Fore.BLUE + "You get in your rowing boat and head towards the Warship.\nYou see a ladder hanging over the side of the ship,\nswaying in the wind.")
+    question_one = input(Fore.MAGENTA + "What do you do?:\n a: Climb aboard the ship alone?\nb: Report the ship to the coast guard?\nc: Call your friends to go aboard with you?\n").lower().strip()
 
     if question_one == "a":
-        print("You have selected - Option a - Climb aboard the ship alone?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Climb aboard the ship alone?\n")
         aboard_the_ship()
     elif question_one == "b":
-        print("You have selected - Option b - Report the ship to the coast guard?")
+        print(Fore.YELLOW + "You have selected - Option b - Report the ship to the coast guard?")
         see_a_figure()
     elif question_one == "c":
-        print("You have selected - Option c - Call your friends to go aboard with you?")
+        print(Fore.YELLOW + "You have selected - Option c - Call your friends to go aboard with you?")
         friends_arrive()
 
 #To get aboard the ship function question two
@@ -147,17 +196,17 @@ def aboard_the_ship():
     Function for question two to show the path to,
     aboard the ship
     """
-    print("Now you have climbed up the ladder, onto the Warship.\nYou start to walk around and see an open hatch.\n")
-    question_two = input("What do you do?:\n a: Go inside the ship through the hatch?\nb: Close the hatch and carry on walking?\n").lower().strip()
+    print(Fore.BLUE + "Now you have climbed up the ladder, onto the Warship.\nYou start to walk around and see an open hatch.\n")
+    question_two = input(Fore.MAGENTA + "What do you do?:\n a: Go inside the ship through the hatch?\nb: Close the hatch and carry on walking?\n").lower().strip()
 
     if question_two == "a":
-        print("You have selected - Option a - Go inside the ship through the hatch?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Go inside the ship through the hatch?\n")
         inside_the_ship()
     elif question_two == "b":
-        print("You have selected - Option b - Close the hatch and carry on walking?")
+        print(Fore.YELLOW + "You have selected - Option b - Close the hatch and carry on walking?")
         walking_the_upperdeck()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         aboard_the_ship()
 
 
@@ -167,17 +216,17 @@ def see_a_figure():
     Function for question three to see a figure on the
     ship, this enables you to go back to getting aboard the ship.
     """
-    print("Whilst your drifting around this huge,\nWarship waiting for the Coastguard.\nYou see a figure aboard the Ship.\n")
-    question_three = input("What do you do?:\n a: Climb aboard the ship to make sure they are okay?\nb: Take your boat futher away from the Warship?\n").lower().strip()
+    print(Fore.BLUE + "Whilst your drifting around this huge,\nWarship waiting for the Coastguard.\nYou see a figure aboard the Ship.\n")
+    question_three = input(Fore.MAGENTA + "What do you do?:\n a: Climb aboard the ship to make sure they are okay?\nb: Take your boat futher away from the Warship?\n").lower().strip()
 
     if question_three == "a":
-        print("You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
         aboard_the_ship()
     elif question_three == "b":
-        print("You have selected - Option b - Take your boat futher away from the Warship?")
+        print(Fore.YELLOW + "You have selected - Option b - Take your boat futher away from the Warship?")
         coastguard()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         see_a_figure()
 
 
@@ -188,17 +237,17 @@ def friends_arrive():
     Function to have your friends arrive to carry on the 
     explouration of the ship
     """
-    print("Your friends are by your side,\nthis gives you a boost of confidence.\nBrian suggests climbing aboard the Ship.\n")
-    question_four = input("What do you do?:\n a: Follow Brian aboard the ship?\nb: Tell them you want to go home?\n").lower().strip()
+    print(Fore.BLUE + "Your friends are by your side,\nthis gives you a boost of confidence.\nBrian suggests climbing aboard the Ship.\n")
+    question_four = input(Fore.MAGENTA + "What do you do?:\n a: Follow Brian aboard the ship?\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_four == "a":
-        print("You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Climb aboard the ship to make sure they are okay?\n")
         aboard_the_ship()
     elif question_four == "b":
-        print("You have selected - Option b - Take your boat futher away from the Warship?")
+        print(Fore.YELLOW + "You have selected - Option b - Take your boat futher away from the Warship?")
         end_one()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         friends_arrive()
 
 #Question number five
@@ -207,17 +256,17 @@ def coastguard():
     Function to have the coastguard assist in seeing the ship,
     to report it and also to find if your allowed to board the ship
     """
-    print("The Coastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
-    question_five = input("What do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
+    print(Fore.BLUE + "The Coastguard has arrived,\nyou start to tell them about finding the Warship.\nThey tell you that they will check it out.\n")
+    question_five = input(Fore.MAGENTA + "What do you do?:\n a: Walk the upperdeck with them?\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_five == "a":
-        print("You have selected - Option a - Walk the upperdeck with them?\n")
+        print(Fore.YELLOW + "You have selected - Option a - Walk the upperdeck with them?\n")
         walking_the_upperdeck()
     elif question_five == "b":
-        print("You have selected - Option b - Take your boat futher away from the Warship?")
+        print(Fore.YELLOW + "You have selected - Option b - Take your boat futher away from the Warship?")
         end_one()
     else:
-        print("invalid option, try again")
+        print(Fore.RED + "invalid option, try again")
         coastguard()
 
 
@@ -252,9 +301,9 @@ def read_game_story():
     Function for the backstory of the game which once has been printed will
     send the Player back to the menu
     """
-    print("Warship is a text based game that brings you to the shore line by your house,\nwhen you arrive at the waters edge, you see a World War II Warship.")
-    print("This ship looks as though it is abandoned, and it sends shivers down your spine.\nYou decide to go towards the vessel to see if its real or your imagination.")
-    print("When you get to the ship, thr story takes you down various paths and as the story\nunfolds you become, more intrested in what the ship has to offer.")
+    print(Fore.YELLOW + "Warship is a text based game that brings you to the shore line by your house,\nwhen you arrive at the waters edge, you see a World War II Warship.")
+    print(Fore.YELLOW + "This ship looks as though it is abandoned, and it sends shivers down your spine.\nYou decide to go towards the vessel to see if its real or your imagination.")
+    print(Fore.YELLOW + "When you get to the ship, thr story takes you down various paths and as the story\nunfolds you become, more intrested in what the ship has to offer.")
     menu()
 
 
@@ -264,8 +313,8 @@ def game_intro():
     Function to introduce the player to the game,
     the story opens in 5 lines
     """
-    print("Welcome to Warship, the game where your choices can change your life.\n")
-    print("Warship is designed for you to move through the different paths\n")
+    print(Fore.BLUE + "Welcome to Warship, the game where your choices can change your life.\n")
+    print(Fore.BLUE + "Warship is designed for you to move through the different paths\n")
     menu()
 
 
@@ -277,10 +326,10 @@ def menu():
     to start the game, learn more about the story,
     or quit the game
     """
-    print("Please select from one of the options below\n")
+    print(Fore.BLUE + "Please select from one of the options below\n")
 
     #Variable for the Opening Menu
-    menu_answer = input("Would you like to:\n A: Start the Game?\n B: Read the backstory to Warship?\n C: Quit the game?\n (A, B or C): ").lower().strip()
+    menu_answer = input(Fore.MAGENTA + "Would you like to:\n A: Start the Game?\n B: Read the backstory to Warship?\n C: Quit the game?\n (A, B or C): ").lower().strip()
 
     if menu_answer == "a":
         play_game()
@@ -292,7 +341,7 @@ def menu():
         quit_game()
 
     else:
-        print("Invalid Entry, please select the correct input using a, b or c")
+        print(Fore.RED + "Invalid Entry, please select the correct input using a, b or c")
         game_intro()
 
 
@@ -300,38 +349,4 @@ def menu():
 game_intro()
 
 
-#Function to end the game at the first point
-def end_one():
-    """
-    Function for the Player to end the game
-    at the first point in the game
-    """
-
-#Function to end the game at the first point
-def end_two():
-    """
-    Function for the Player to end the game
-    at the second point in the game
-    """
-
-#Function to end the game at the first point
-def end_three():
-    """
-    Function for the Player to end the game
-    at the third point in the game
-    """
-
-#Function to end the game at the first point
-def end_four():
-    """
-    Function for the Player to end the game
-    at the fourth point in the game
-    """
-
-#Function to end the game at the first point
-def final_end():
-    """
-    Function for the Player to end the game
-    at the final point in the game
-    """
 
