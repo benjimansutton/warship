@@ -21,33 +21,36 @@ There is no winning or losing, but more the users want to go further into the Wa
 ### Existing Features
 ​
 * Use of Colorama
-    * The use of colorama has been implemented to enable quick and easy viewing if something is inncorrect in RED
-    * Using BLUE for the use
-* Use of the clear function to clear the users terminal
-* 
+    * The use of colorama has been implemented to enable quick and easy viewing if something is incorrect in RED
+    * Using BLUE for the use of information for the user
+    * Using YELLOW for standout information like, the selection choice
 ​
-![Random board generation](documents/testing/random.png)
+![Use of Colorama](documents/testing/random.png)
+
+* The Story behind Warship
 ​
-* Play against the computer
-* Accepts user input
-* Maintains scores
+![Warship Story](documents/testing/random.png)
+
+* Use of the clear function to clear the users terminal during the game play
 ​
-![Input and scores](documents/testing/input.png)
+![Clear Function](documents/testing/input.png)
 ​
-* Input validation and error-checking
-    * You cannot enter coordinates outside the size of the grid
-    * You must enter numbers
-    * You cannot enter the same guess twice
+* Refactoring of code
+    * Removing the five End Game Function and combining into one function
+    * Adding the Final End game function into the End Game function
 ​
-![Input validation](documents/testing/errors.png)
+![Refactoring of Code](documents/testing/errors.png)
 ​
-* Data maintained in class instances
+* Displaying Errors when the user inputs the wrong information
 ​
+![Displaying Errors](documents/testing/errors.png)
+
 ### Future Features
 ​
-* Allow player to select the board size and number of ships
-* Allow player to position ships themselves
-* Have ships larger than 1x1
+* To allow users to set usernames
+* Adding in Terminal Based Graphics
+
+![Terminal Based Graphics](documents/testing/errors.png)
 ​
 ## Data Model
 ​
@@ -80,7 +83,9 @@ I have manually tested this project by doing the following:
 ​
 * PEP8
     * No errors were returned from PEP8online.com
-	![pep8-screenshot](documents/testing/pep8.png]
+	![PEP8 Errors Screen Shot 1](documents/testing/pep8.png]
+    ![PEP8 Errors Screen Shot 2](documents/testing/pep8.png]
+    ![PEP8 No Errors](documents/testing/pep8.png]
 ​
 ## Deployment
 ​

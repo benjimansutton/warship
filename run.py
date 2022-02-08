@@ -426,7 +426,8 @@ def read_game_story():
     print(
         Fore.YELLOW + "When you get to the ship, "
         "the story takes you down various paths and as the story\n"
-        "unfolds you become, more interested in what the ship has to offer.\n")
+        "unfolds you become, more interested in what the ship"
+        "has to offer.\n")
     menu()
 
 
