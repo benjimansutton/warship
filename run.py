@@ -23,7 +23,8 @@ def replay_game():
     back to the beginning
     """
     replay_game_answer = input(
-        Fore.BLUE + "Would you like to play the game again? (yes/no): ").lower(
+        Fore.BLUE +
+        "Would you like to play the game again? (yes/no):\n").lower(
         ).strip()
     if replay_game_answer == "yes":
         game_intro()
@@ -32,6 +33,7 @@ def replay_game():
         print(
             Fore.YELLOW + "Thank You for playing the game, have a lovely day.")
     else:
+        clear()
         print(Fore.RED + choices[0])
         replay_game()
 
@@ -44,9 +46,10 @@ def end_game(result):
 
     if result == 'final':
         print(
-            Fore.RED + "YOUR LYING IN BED, SWEATING\nTHE DREAM FELT SO REAL")
+            Fore.RED +
+            "YOU'RE LYING IN BED, SWEATING\nTHE DREAM FELT SO REAL\n")
     else:
-        print(Fore.RED + "You have decided to go home....")
+        print(Fore.RED + "\nYou have decided to go home....\n")
     replay_game()
 
 
@@ -66,15 +69,17 @@ def leave_in_a_hurry():
         Fore.BLUE + "Your out of the ship,"
         "so scared with whats just happened.")
     question_ten = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Catch your breath and get up the"
         "\ncourage to follow the sound again?"
         "\nb: Leave the ship and go home?\n").lower().strip()
 
     if question_ten == "a":
+        clear()
         print(options[1])
         follow_the_sound()
     elif question_ten == "b":
+        clear()
         print(
             Fore.YELLOW + "You selected - " +
             options[2] + options[3])
@@ -96,10 +101,11 @@ def door_open():
         "\nThen the final part of door opens fast.\nYou see a figure...\n")
 
     final_end_answer = input(
-        Fore.MAGENTA + "Type in sound, to see what happens next?").lower(
+        Fore.MAGENTA + "Type in 'sound' to see what happens next?\n").lower(
         ).strip()
 
     if final_end_answer == "sound":
+        clear()
         print(
             Fore.RED + "With a scream, you are startled awake.\n"
             "You slowly start realising that you where asleep the whole time."
@@ -107,7 +113,7 @@ def door_open():
         end_game('final')
     else:
         clear()
-        print(Fore.RED + "Wrong word, type sound.\n")
+        print(Fore.RED + "Wrong word, type 'sound'.\n")
         door_open()
 
 
@@ -122,20 +128,23 @@ def inside_the_ship():
         "\nJust then you hear a metal on metal banging noise.")
 
     question_six = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Follow the sound to find the source?"
         "\nb: Go back through the hatch and onto\nthe upper deck?\n").lower(
         ).strip()
 
     if question_six == "a":
+        clear()
         print(Fore.YELLOW + "Follow the sound to find the source?\n")
         follow_the_sound()
     elif question_six == "b":
+        clear()
         print(
             Fore.YELLOW + choices[1] +
             "Go back through the hatch and onto the upper deck?")
         walking_the_upperdeck()
     else:
+        clear()
         print(Fore.RED + choices[0])
         inside_the_ship()
 
@@ -151,21 +160,24 @@ def walking_the_upperdeck():
         "\nYou see a ghost like figure.")
 
     question_seven = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Chase the figure to see what it's doing?"
         "\nb: Get off the ship in quicktime and\ngo home?\n").lower().strip()
 
     if question_seven == "a":
+        clear()
         print(
             Fore.YELLOW + choices[1] +
             "Chase the figure to see what it's doing?\n")
         chase_the_figure()
     elif question_seven == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] +
             "Get off the ship in quicktime and go home?")
         end_game('non final')
     else:
+        clear()
         print(Fore.RED + choices[0])
         walking_the_upperdeck()
 
@@ -183,21 +195,24 @@ def follow_the_sound():
         "\nyou start to shake as it gets louder and louder.")
 
     question_eight = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Open the door to see the source of the sound?"
         "\nb: Leave the ship as quick as you can?\n").lower().strip()
 
     if question_eight == "a":
+        clear()
         print(
             Fore.YELLOW + choices[1] +
             "Open the door to see the source of the sound?\n")
         door_open()
     elif question_eight == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] +
             "Leave the ship as quick as you can?")
         leave_in_a_hurry()
     else:
+        clear()
         print(Fore.RED + choices[0])
         follow_the_sound()
 
@@ -219,12 +234,15 @@ def chase_the_figure():
         "\nb: Leave the ship as quick as you can?\n").lower().strip()
 
     if question_nine == "a":
+        clear()
         print(Fore.YELLOW + choices[1] + "Follow the sound?\n")
         follow_the_sound()
     elif question_nine == "b":
+        clear()
         print(Fore.YELLOW + choices[2] + "Leave the ship as quick as you can?")
         leave_in_a_hurry()
     else:
+        clear()
         print(Fore.RED + choices[0])
         chase_the_figure()
 
@@ -244,26 +262,29 @@ def opener_question():
         "\nYou see a ladder hanging over the side of the ship,"
         "\nswaying in the wind.")
     question_one = input(
-        Fore.MAGENTA + "\nWhat do you do?:\na: Climb aboard the ship alone?"
+        Fore.MAGENTA + "\nWhat do you do?:\n\na: Climb aboard the ship alone?"
         "\nb: Report the ship to the coast guard?"
         "\nc: Call your friends to go aboard with you?\n").lower().strip()
 
     if question_one == "a":
+        clear()
         print(Fore.YELLOW + choices[1] + "Climb aboard the ship alone?\n")
         aboard_the_ship()
     elif question_one == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] +
             "Report the ship to the coast guard?")
-        clear()
         see_a_figure()
     elif question_one == "c":
+        clear()
         print(
             Fore.YELLOW + choices[3] +
             "Call your friends to go aboard with you?")
         clear()
         friends_arrive()
     else:
+        clear()
         print(Fore.RED + choices[0])
         opener_question()
 
@@ -278,21 +299,24 @@ def aboard_the_ship():
         Fore.BLUE + "Now you have climbed up the ladder, onto the Warship."
         "\nYou start to walk around and see an open hatch.")
     question_two = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Go inside the ship through the hatch?"
         "\nb: Close the hatch and carry on walking?\n").lower().strip()
 
     if question_two == "a":
+        clear()
         print(
             Fore.YELLOW + choices[1] +
             "Go inside the ship through the hatch?\n")
         inside_the_ship()
     elif question_two == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] +
             "Close the hatch and carry on walking?")
         walking_the_upperdeck()
     else:
+        clear()
         print(Fore.RED + choices[0])
         aboard_the_ship()
 
@@ -309,22 +333,25 @@ def see_a_figure():
         "\nYou see a figure aboard the Ship.")
     question_three = input(
         Fore.MAGENTA +
-        "\nWhat do you do?:"
+        "\nWhat do you do?:\n"
         "\na: Climb aboard the ship to make sure they are okay?"
         "\nb: Take your boat further away from the Warship?\n").lower().strip()
 
     if question_three == "a":
+        clear()
         print(
             Fore.YELLOW + choices[1] +
             "Climb aboard the ship to make sure they are okay?\n")
         aboard_the_ship()
         clear()
     elif question_three == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] +
             "Take your boat further away from the Warship?")
         coastguard()
     else:
+        clear()
         print(Fore.RED + choices[0])
         see_a_figure()
 
@@ -340,21 +367,24 @@ def friends_arrive():
         "\nBrian suggests climbing aboard the Ship.\n")
 
     question_four = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Follow Brian aboard the ship?"
         "\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_four == "a":
+        clear()
         print(
             Fore.YELLOW + choices[1] +
             "Climb aboard the ship to make sure they are okay?\n")
         aboard_the_ship()
     elif question_four == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] +
             "Tell them you want to go home?")
         end_game('non final')
     else:
+        clear()
         print(Fore.RED + choices[0])
         friends_arrive()
 
@@ -371,18 +401,21 @@ def coastguard():
         "\nThey tell you that they will check it out.")
 
     question_five = input(
-        Fore.MAGENTA + "\nWhat do you do?:"
+        Fore.MAGENTA + "\nWhat do you do?:\n"
         "\na: Walk the upper deck with them?"
         "\nb: Tell them you want to go home?\n").lower().strip()
 
     if question_five == "a":
+        clear()
         print(Fore.YELLOW + choices[1] + "Walk the upper deck with them?\n")
         walking_the_upperdeck()
     elif question_five == "b":
+        clear()
         print(
             Fore.YELLOW + choices[2] + "Tell them you want to go home?")
         end_game('non final')
     else:
+        clear()
         print(Fore.RED + choices[0])
         coastguard()
 
@@ -393,6 +426,7 @@ def quit_game():
     at multiple points including the menu and during
     game play
     """
+    clear()
     print(
         Fore.RED + "You have decided to Quit the game, Thanks for playing.\n")
 
@@ -402,6 +436,7 @@ def play_game():
     Function for game play to start and push the player
     towards the first question
     """
+    clear()
     print(Fore.YELLOW + "You have selected Play the Game.\n")
     opener_question()
 
@@ -457,10 +492,10 @@ def menu():
 
     # Variable for the Opening Menu
     menu_answer = input(
-        Fore.MAGENTA + "\nWould you like to:"
+        Fore.MAGENTA + "\nWould you like to:\n"
         "\na: Start the Game?"
         "\nb: Read the backstory to Warship?"
-        "\nc: Quit the game?\n(a, b or c): \n").lower().strip()
+        "\nc: Quit the game?\n\n(a, b or c): \n").lower().strip()
 
     if menu_answer == "a":
         play_game()
@@ -471,9 +506,10 @@ def menu():
     elif menu_answer == "c":
         quit_game()
     else:
+        clear()
         print(
-            Fore.RED + "Invalid Entry, please select the correct input using"
-            "a, b or c\n")
+            Fore.RED + "Invalid Entry, please select the correct input using "
+            "a, b, or c\n")
         menu()
 
 
